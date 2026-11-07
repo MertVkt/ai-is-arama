@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ön Yazı - [Şirket], [Pozisyon]
+%
+% Yer tutucu içerikli örnek ön yazı. /apply için yapı referansıdır
+% (bkz. 06-cover-letter-templates.md) ve CI'da cover.cls testi olarak
+% derlenir: xelatex ile her zaman tam 1 sayfa çıkmalıdır.
+% Doğru madde işareti kullanımını gösterir: liste \lettercontent{}
+% DIŞINDA durur (içindeki \\ \end{itemize} ile hata verir) ve madde
+% fontunun gövdeyle aynı olması için Raleway-Medium ile sarılır.
+% Raleway'de ₺ işareti yok, tutar yazarken "TL" kullan.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Sayfa \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     İSİM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{[YOUR NAME]}}{  \href{mailto:e-posta@ornek.com}{e-posta@ornek.com} | [+90 5XX XXX XX XX] |  \urlstyle{same}\href{https://www.linkedin.com/in/profilin}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ÖN YAZI İÇERİĞİ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{[GG.AA.YYYY]}
+\lettercontent{Sayın [İşe Alım Yetkilisi / Ekip],}
+
+\lettercontent{[Giriş paragrafı: pozisyonun adını ve ilanı nerede gördüğünü yaz, bu işle en güçlü bağını tek cümlede söyle ve neden uygun olduğuna kısaca değin. En fazla 2-3 cümle.]}
+
+\lettercontent{[Gövde paragrafı: ilandaki görevlerle en çok örtüşen deneyimin. Ardından 3-5 somut madde:]}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{[Başarı 1]:} [mümkünse rakamla somut bir sonuç]
+    \item \textbf{[Başarı 2]:} [ilandaki bir şarta karşılık gelen beceri veya proje]
+    \item \textbf{[Başarı 3]:} [tercih sebebi olan bir şarta kanıt]
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{[Şirket paragrafı: neden özellikle bu şirket. Doğrulanmış somut bir şeye değin: bir ürün, açıklanmış bir hedef, bir ekip. Asla genel geçer cümleler kurma.]}
+
+\lettercontent{[Kişisel uyum paragrafı: çalışma tarzın ve ekibe ne katacağın, 2-3 cümle.]}
+
+\lettercontent{Değerlendirmeniz için teşekkür eder, görüşme fırsatı için hazır olduğumu belirtmek isterim.}
+
+\begin{flushright}
+% Not: \closing{} içinde sonda \\ kullanma; cover.cls kendi \\'ını ekliyor,
+% çift satır sonu "There's no line here to end." hatası verir.
+\closing{Saygılarımla,}
+
+\signature{[YOUR NAME]}
+\end{flushright}
+\end{document}

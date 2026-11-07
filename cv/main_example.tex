@@ -1,0 +1,185 @@
+%% Örnek Özgeçmiş - [YOUR_NAME]
+%% Tüm yetkinlikleri, deneyimleri ve başarıları kapsayan ana özgeçmiş.
+%% Pozisyona özel özgeçmişler hazırlanırken referans olarak kullanılır.
+%%
+%% KURULUM: Kendi bilgilerinle doldurmak için /setup komutunu çalıştır.
+%% Derleme: lualatex main_example.tex
+%% (pdflatex, yeni MiKTeX kurulumlarında fontawesome5 hatası verebilir.)
+%%
+%% Not: İngilizce ilanlara başvururken /apply bu şablonu İngilizceye çevirip
+%% bölüm başlıklarını da İngilizce yazar (Experience, Education vb.).
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% İsim ve bölüm başlıklarını moderncv mavisiyle (color1) göster. banking
+% stili lualatex ile bunları siyah bırakabiliyor.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={[YOUR_NAME] - Özgeçmiş},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{import}
+
+% kişisel bilgiler
+\name{[Ad]}{[Soyad]}
+\address{[İlçe, İl]}{}{}
+\phone[mobile]{[+90 5XX XXX XX XX]}
+\email{[e-posta@ornek.com]}
+\extrainfo{\href{[https://linkedin.com/in/profilin]}{LinkedIn}, \href{[https://github.com/kullanici-adin]}{GitHub}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFİL
+% ============================================================
+
+\vspace{6pt}
+\small{[Başvurduğun pozisyona göre 3-5 satırlık bir profil yazısı. Seni bu iş için öne çıkaran şeye odaklan. Örnek: "[Alan] bölümü mezunu, [X] yıllık deneyime sahip veri analisti. [Sektör] bilgisini Python ve SQL ile uygulamalı analiz becerisiyle birleştiriyor. Verinin toplanmasından yöneticilere sunulan raporlara kadar uçtan uca süreçler kurdu."]}
+
+% ============================================================
+%     YETKİNLİKLER
+% ============================================================
+
+\section{Yetkinlikler}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{[Yetkinlik Grubu 1]}: [Somut beceriler, araçlar, teknolojiler.]
+
+\item \textbf{[Yetkinlik Grubu 2]}: [Somut beceriler, araçlar, teknolojiler.]
+
+\item \textbf{[Yetkinlik Grubu 3]}: [Somut beceriler, araçlar, teknolojiler.]
+
+\item \textbf{[Yetkinlik Grubu 4]}: [Sektör bilgisi, yöntemler, yaklaşımlar.]
+
+\item \textbf{[Yetkinlik Grubu 5]}: [Programlar, platformlar, yazılımlar.]
+
+\end{itemize}
+
+% ============================================================
+%     İŞ DENEYİMİ
+% ============================================================
+
+\section{İş Deneyimi}
+\vspace{3pt}
+\begin{itemize}
+
+% --- Son pozisyon ---
+\item{\cventry{[YYYY--Halen]}{[Pozisyon]}{[Şirket]}{[İl]}{}{\vspace{1pt}
+\begin{itemize}
+    \item [Başarı veya sorumluluk 1: somut ol, mümkünse rakam ver]
+    \item [Başarı veya sorumluluk 2]
+    \item [Başarı veya sorumluluk 3]
+    \item [Başarı veya sorumluluk 4]
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Önceki pozisyon ---
+\item{\cventry{[YYYY--YYYY]}{[Pozisyon]}{[Şirket]}{[İl]}{}{\vspace{1pt}
+\begin{itemize}
+    \item [Başarı veya sorumluluk 1]
+    \item [Başarı veya sorumluluk 2]
+    \item [Başarı veya sorumluluk 3]
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Daha eski pozisyon ---
+\item{\cventry{[YYYY--YYYY]}{[Pozisyon]}{[Şirket]}{[İl]}{}{\vspace{1pt}
+\begin{itemize}
+    \item [Başarı veya sorumluluk 1]
+    \item [Başarı veya sorumluluk 2]
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EĞİTİM
+% ============================================================
+
+\section{Eğitim}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{[YYYY--YYYY]}{[Bölüm], [Lisans / Yüksek Lisans]}{[Üniversite]}{[İl]}{}{\vspace{1pt}
+Tez: ``[Tez Başlığı].'' [Araştırma konusunun kısa açıklaması.]
+}}
+
+\vspace{3pt}
+
+\item{\cventry{[YYYY--YYYY]}{[Bölüm], [Lisans / Ön Lisans]}{[Üniversite]}{[İl]}{}{\vspace{1pt}
+[Kısa açıklama veya öne çıkan dersler.]
+}}
+
+\end{itemize}
+
+% ============================================================
+%     YABANCI DİL
+% ============================================================
+
+\section{Yabancı Dil}
+\vspace{1pt}
+\begin{itemize}
+\item Türkçe (ana dil), [Dil 2] ([seviye, örn. ileri / C1, YDS veya IELTS puanı]), [Dil 3] (orta).
+\end{itemize}
+
+% ============================================================
+%     SERTİFİKALAR (isteğe bağlı)
+% ============================================================
+
+\section{Sertifikalar}
+\vspace{1pt}
+\begin{itemize}
+\item{\textbf{[Sertifika Adı]} -- [Kurum] ([Yıl]).}
+\end{itemize}
+
+% ============================================================
+%     ÖDÜLLER (isteğe bağlı)
+% ============================================================
+
+\section{Ödüller}
+\vspace{1pt}
+\begin{itemize}
+\item{\textbf{[Ödül Adı]} -- [Etkinlik / Kurum] ([Yıl]).}
+\end{itemize}
+
+% ============================================================
+%     EK BİLGİLER (isteğe bağlı, Türkiye'deki başvurularda yaygın)
+%     Askerlik ve ehliyet çoğu yerli ilanda sorulur. İngilizce veya
+%     yurt dışı başvurularda bu bölümü çıkar. Fotoğraf, medeni durum ve
+%     doğum tarihi zorunlu değildir; eklemek tamamen senin tercihin.
+% ============================================================
+
+\section{Ek Bilgiler}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Askerlik}: [Tamamlandı / Tecilli / Muaf]
+\item \textbf{Ehliyet}: [B sınıfı]
+\end{itemize}
+
+% ============================================================
+%     REFERANSLAR
+% ============================================================
+
+\section{Referanslar}
+\vspace{1pt}
+\begin{itemize}
+\item{Talep edilmesi hâlinde sunulacaktır.}
+\end{itemize}
+
+\end{document}

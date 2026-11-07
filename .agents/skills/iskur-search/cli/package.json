@@ -1,0 +1,23 @@
+{
+  "name": "iskur-cli",
+  "version": "1.0.0",
+  "description": "CLI for public İŞKUR (Türkiye İş Kurumu) open job listings",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "iskur": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bunli/core": "0.9.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/bun": "1.4.4"
+  }
+}
